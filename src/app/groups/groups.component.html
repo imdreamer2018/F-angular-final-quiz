@@ -1,1 +1,9 @@
-<p>groups works!</p>
+<h1>分组列表</h1>
+<button (click)="autoGrouping()">学员分组</button>
+<ul>
+  <li *ngFor="let group of groups">
+    <p>{{group.name}}</p>
+    <p *ngFor="let trainer of group.trainers">{{trainer.id}}.{{trainer.name}}</p>
+    <p *ngFor="let trainee of group.trainees">{{trainee.id}}.{{trainee.name}}</p>
+  </li>
+</ul>

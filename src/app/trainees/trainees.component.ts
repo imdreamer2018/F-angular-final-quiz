@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Trainee} from '../trainee';
+import {Store} from '@ngrx/store';
+import {selectorTrainees} from '../store/selectors/trainees.selector';
+import {loadTrainees} from '../store/actions/trainees.action';
 
 @Component({
   selector: 'app-trainees',
@@ -6,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trainees.component.scss']
 })
 export class TraineesComponent implements OnInit {
+  trainees: Trainee[];
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.store.select(selectorTrainees).subscribe(trainees => this.trainees = trainees);
+    this.store.dispatch(loadTrainees());
   }
 
 }
