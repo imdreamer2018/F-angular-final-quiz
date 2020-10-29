@@ -23,3 +23,8 @@ Color is defined at `src/_variables.scss` .
 | Gray          | #929aab |
 | Dark Gray     | #393e46 |
 | Primary color | #ea5455 |
+
+## Mock up
+
+![Mock up](mockup/mockup.png)
+
