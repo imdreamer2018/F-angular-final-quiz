@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-final-quiz"
+    }
+  },
+  "defaultProject": "angular-final-quiz",
+  "cli": {
+    "analytics": "66d5c915-846c-4b9a-a75e-6f8e535a76bb"
+  }
 }
