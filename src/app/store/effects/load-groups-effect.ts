@@ -8,7 +8,7 @@ import {loadGroups, postGroups, setGroups} from '../actions/groups.action';
 import {GroupsService} from '../../service/groups.service';
 
 @Injectable()
-export class LoadGroupsEffect {
+export class LoadGroupsEffect { // TODO GTB-4: - 类名不正确，可以叫GroupEffects
   loadGroupsEffect$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(loadGroups),

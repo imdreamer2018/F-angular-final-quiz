@@ -16,6 +16,7 @@ export class GroupsService {
     return this.http.get<Group[]>('http://127.0.0.1:8080/groups');
   }
 
+  // TODO GTB-1: - 分组请求需要处理异常
   autoGrouping(): Observable<Group[]> {
     const requestOptions = {
       method: 'POST',
